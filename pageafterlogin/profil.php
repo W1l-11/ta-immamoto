@@ -221,7 +221,7 @@ padding-left: 50px;
 
 .card-container {
 display: grid;
-grid-template-columns: repeat(4, 1fr);
+grid-template-columns: repeat(3, 1fr);
 gap: 38px;
 padding: 20px 50px; 
 }
@@ -352,6 +352,7 @@ margin-right: 10px;
             <p>Rp 50.000.000</p>
         </div>
     </div>
+</div>
 
 <!-- Footer -->
 <footer style="background-color: #6f1919; color: white; text-align: center; padding: 20px;">
