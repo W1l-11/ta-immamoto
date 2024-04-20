@@ -9,7 +9,13 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <style>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+            <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+    }
             body {
                 padding: 0;
     margin: 0;
@@ -223,7 +229,7 @@ padding-left: 50px;
 display: grid;
 grid-template-columns: repeat(3, 1fr);
 gap: 38px;
-padding: 20px 50px; 
+padding: 20px 150px; 
 }
 
 .product-card {
@@ -279,6 +285,29 @@ footer img {
 vertical-align: middle;
 margin-right: 10px; 
 }
+.line  {
+    border-bottom: 2px solid #000;
+    width: 234px;
+}
+
+.product-line {
+    width: 1349px;
+    height: 51px;
+    border: none;
+    border-bottom: 2px solid #000; /* Atur warna garis sesuai kebutuhan */
+    margin: 0 auto; /* Untuk menengahkan garis */
+}
+
+.product-label {
+    text-align: center;
+    margin-top: -40px; /* Sesuaikan posisi teks agar berada di tengah garis */
+}
+
+.product-label p {
+    font-size: larger;
+    font-weight: 700;
+}
+
         </style>
     </head>
     <body>
@@ -321,7 +350,56 @@ margin-right: 10px;
   </ul>
 </nav>
 
+<!-- Profile -->
 
+<div class="section_awal flex flex-row w-full px-12 gap-10 items-center justify-between">
+    <div class="flex flex-row items-center gap-4">
+        <div class="profile-pic w-[110px] py-6">
+            <img src="../images/bigger_account.png" alt="" width="110px" height="110px">
+            <a href="#"><img class="absolute left-32 top-[16rem]" src="../images/plus_pic.png" alt=""></a>
+        </div>
+
+        <div class="text_data">
+            <p class="font-bold text-3xl" style="color: #545F71;">Nama</p>
+            <div class="line"></div>
+            <br>
+            <p class="font-bold text-lg leading-snug ">Deskripsi</p>
+            <p class="font-medium text-lg leading-none">Isi deskripsi</p>
+        </div>
+    </div>
+
+    <div class="edit_data px-12">
+        <button class=""><img src="../images/edit.png" alt=""></button>
+    </div>
+</div>
+
+<div class="deskripsi_tambahan">
+    <div class="flex flex-col px-12">
+        <p class="font-bold text-lg">No Telp :      </p>
+        <p class="font-bold text-lg">Email :        </p>
+        <p class="font-bold text-lg">Alamat :       </p>
+    </div>
+</div>
+
+<!-- Produk Jual -->
+
+<hr class="product-line"/>
+<div class="product-label">
+    <p>Produk Jual</p>
+</div>
+
+<br>
+<br>
+
+<div class="penilaian flex flex-col justify-center items-center">
+    <div class="rating_penjualan flex flex-row items-center justify-center">
+        <p class="font-bold text-2xl">Rating Penjualan :</p>
+        <img src="../images/rating_star.png" alt="">
+    </div>
+    <p class="font-bold text-normal" style="color:#545F71">Hanya Pembeli Yang Bisa Melakukan Rating Penjualan</p>
+</div>
+
+<br>
 
 <!-- Card motor -->
 
